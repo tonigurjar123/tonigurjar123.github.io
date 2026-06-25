@@ -12,7 +12,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
@@ -27,8 +26,7 @@
         </div>
     </header>
 
-    <!-- Page Title Banner -->
-    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80');">
+    <section class="page-banner">
         <div class="hero-overlay"></div>
         <div class="container text-center position-relative">
             <span class="section-subtitle" style="color: var(--gold-accent);">SPATIAL INSPIRATIONS</span>
@@ -37,11 +35,9 @@
         </div>
     </section>
 
-    <!-- Gallery Exhibition Matrix Grid -->
     <section class="section">
         <div class="container">
             <div class="grid-3">
-                <!-- Project 1: Majestic Living Hall -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Luxury Living Room Flooring">
                     <div class="gallery-overlay">
@@ -52,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 2: High-Gloss Culinary Counter -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Exotic Granite Kitchen Countertop">
                     <div class="gallery-overlay">
@@ -63,7 +58,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 3: Minimalist Bath Lounge -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Premium Marble Bathroom Cladding">
                     <div class="gallery-overlay">
@@ -74,7 +68,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 4: Royal Entry Foyer -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Entry Foyer Setup">
                     <div class="gallery-overlay">
@@ -85,7 +78,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 5: External Accent Facade -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Premium Stone External Cladding">
                     <div class="gallery-overlay">
@@ -96,7 +88,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 6: Modern Dining Base -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Bespoke Marble Dining Surface">
                     <div class="gallery-overlay">
@@ -111,7 +102,6 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
@@ -142,9 +132,7 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
 </body>
 </html>

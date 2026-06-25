@@ -12,20 +12,20 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Our Legacy</a>
                 <a href="collection.html" class="nav-link active">The Collection</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link">Private Consultation</a>
             </nav>
             <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
-    <!-- Page Title Banner -->
     <section class="page-banner">
         <div class="hero-overlay"></div>
         <div class="container text-center position-relative">
@@ -35,7 +35,6 @@
         </div>
     </section>
 
-    <!-- Stone Showcase Matrix -->
     <section class="section">
         <div class="container">
             <div class="grid-3">
@@ -103,7 +102,6 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
@@ -113,7 +111,9 @@
             <div class="footer-links">
                 <h3>Navigation</h3>
                 <a href="index.html">Home</a>
+                <a href="about.html">Our Legacy</a>
                 <a href="collection.html">The Collection</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Private Consultation</a>
             </div>
             <div class="footer-contact">
@@ -132,9 +132,7 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
 </body>
 </html>

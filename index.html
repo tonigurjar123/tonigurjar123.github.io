@@ -16,13 +16,20 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
+            
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">Our Legacy</a>
-                <a href="collection.html" class="nav-link">The Collection</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="contact.html" class="nav-link">Private Consultation</a>
+                <a href="index.html" class="nav-link active" data-en="Home" data-hi="होम">Home</a>
+                <a href="about.html" class="nav-link" data-en="Our Legacy" data-hi="हमारी विरासत">Our Legacy</a>
+                <a href="collection.html" class="nav-link" data-en="The Collection" data-hi="कलेक्शन">The Collection</a>
+                <a href="gallery.html" class="nav-link" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+                <a href="contact.html" class="nav-link" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
             </nav>
+
+            <!-- Luxury Language Selector Switch -->
+            <div class="lang-switcher">
+                <button id="lang-btn" onclick="toggleLanguage()">HI</button>
+            </div>
+
             <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
@@ -31,12 +38,12 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="hero-tagline">Timeless Masterpieces Carved By Nature</span>
-            <h1 class="hero-title">Luxury Living Begins With Premium Stone</h1>
-            <p class="hero-desc">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
+            <span class="hero-tagline" data-en="Timeless Masterpieces Carved By Nature" data-hi="प्रकृति द्वारा तराशे गए सदाबहार शाहकार">Timeless Masterpieces Carved By Nature</span>
+            <h1 class="hero-title" data-en="Luxury Living Begins With Premium Stone" data-hi="लक्जरी लिविंग की शुरुआत प्रीमियम पत्थरों से होती है">Luxury Living Begins With Premium Stone</h1>
+            <p class="hero-desc" data-en="Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite." data-hi="जय माता इंटरनेशनल मार्बल एंड ग्रेनाइट द्वारा विशिष्ट स्थानों के लिए तैयार किए गए विदेशी इतालवी मार्बल, दुर्लभ वास्तुशिल्प क्वार्टजाइट और शानदार ग्रेनाइट के हमारे चुने हुए कलेक्शन को देखें।">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
             <div class="hero-cta-group">
-                <a href="collection.html" class="btn btn-primary">Explore Collection</a>
-                <a href="contact.html" class="btn btn-secondary">Book VIP Consultation</a>
+                <a href="collection.html" class="btn btn-primary" data-en="Explore Collection" data-hi="कलेक्शन देखें">Explore Collection</a>
+                <a href="contact.html" class="btn btn-secondary" data-en="Book VIP Consultation" data-hi="वीआईपी परामर्श बुक करें">Book VIP Consultation</a>
             </div>
         </div>
     </section>
@@ -44,50 +51,9 @@
     <!-- Brand Philosophy -->
     <section class="section philosophy">
         <div class="container text-center max-width-700">
-            <span class="section-subtitle">THE ART OF CRAFTSMANSHIP</span>
-            <h2 class="section-title">The Absolute Pinnacle of Luxury</h2>
-            <p class="section-desc">Under the visionary leadership of <strong>Surendra Gurjar</strong>, Jay Mata International brings you world-class stones sourced meticulously from prestigious global quarries. Located in the marble heartland of Kishangarh, we offer unrivaled veining, ultimate purity, and world-class finishes tailored to your dream architecture.</p>
-        </div>
-    </section>
-
-    <!-- Featured Categories Grid -->
-    <section class="section bg-light">
-        <div class="container">
-            <span class="section-subtitle">OUR CURATED EXHIBITIONS</span>
-            <h2 class="section-title text-center">Architectural Masterpieces</h2>
-            
-            <div class="grid-3">
-                <div class="stone-card">
-                    <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Exotic Italian Marble" class="stone-img">
-                    </div>
-                    <div class="stone-info">
-                        <h3>Exotic Italian Marble</h3>
-                        <p>Statuary, Calacatta Gold, and Carrara variants displaying majestic, artistic dramatic veining.</p>
-                        <a href="collection.html" class="card-link">View Variants <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="stone-card">
-                    <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Exotic Quartzite & Onyx" class="stone-img">
-                    </div>
-                    <div class="stone-info">
-                        <h3>Rare Onyx & Quartzite</h3>
-                        <p>Translucent back-lit masterpieces that redefine ultra-luxury living and accent spaces.</p>
-                        <a href="collection.html" class="card-link">View Variants <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="stone-card">
-                    <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Premium Granites" class="stone-img">
-                    </div>
-                    <div class="stone-info">
-                        <h3>Luxury Granites</h3>
-                        <p>High-integrity premium surfaces combining bulletproof durability with deep crystal depth.</p>
-                        <a href="collection.html" class="card-link">View Variants <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            <span class="section-subtitle" data-en="THE ART OF CRAFTSMANSHIP" data-hi="शिल्पकला की कला">THE ART OF CRAFTSMANSHIP</span>
+            <h2 class="section-title" data-en="The Absolute Pinnacle of Luxury" data-hi="लक्जरी का पूर्ण शिखर">The Absolute Pinnacle of Luxury</h2>
+            <p class="section-desc" data-en="Under the visionary leadership of Surendra Gurjar, Jay Mata International brings you world-class stones sourced meticulously from prestigious global quarries. Located in the marble heartland of Kishangarh, we offer unrivaled veining, ultimate purity, and world-class finishes tailored to your dream architecture." data-hi="सुरेंद्र गुर्जर के दूरदर्शी नेतृत्व में, जय माता इंटरनेशनल आपके लिए प्रतिष्ठित वैश्विक खदानों से सावधानीपूर्वक लाए गए विश्व स्तरीय पत्थर पेश करता है। मार्बल की मुख्य भूमि किशनगढ़ में स्थित, हम आपके सपनों की वास्तुकला के अनुकूल अद्वितीय नक्काशी, अत्यधिक शुद्धता और विश्व स्तरीय फिनिश प्रदान करते हैं।">Under the visionary leadership of Surendra Gurjar, Jay Mata International brings you world-class stones sourced meticulously from prestigious global quarries. Located in the marble heartland of Kishangarh, we offer unrivaled veining, ultimate purity, and world-class finishes tailored to your dream architecture.</p>
         </div>
     </section>
 
@@ -96,19 +62,19 @@
         <div class="container footer-grid">
             <div class="footer-about">
                 <a href="#" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
-                <p>Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates.</p>
+                <p data-en="Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates." data-hi="लाखों वर्षों के प्राकृतिक क्रिस्टलीकरण से निर्मित वास्तुशिल्प लक्जरी। सुरेंद्र गुर्जर के नेतृत्व में, हम सीधे विश्व स्तरीय संपत्तियों तक पूर्ण भव्यता पहुंचाते हैं।">Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates.</p>
             </div>
             <div class="footer-links">
-                <h3>Navigation</h3>
-                <a href="index.html">Home</a>
-                <a href="about.html">Our Legacy</a>
-                <a href="collection.html">The Collection</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Private Consultation</a>
+                <h3 data-en="Navigation" data-hi="नेविगेशन">Navigation</h3>
+                <a href="index.html" data-en="Home" data-hi="होम">Home</a>
+                <a href="about.html" data-en="Our Legacy" data-hi="हमारी विरासत">Our Legacy</a>
+                <a href="collection.html" data-en="The Collection" data-hi="कलेक्शन">The Collection</a>
+                <a href="gallery.html" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+                <a href="contact.html" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
             </div>
             <div class="footer-contact">
-                <h3>Connoisseur Desk</h3>
-                <p><i class="fa-solid fa-user"></i> Founder: Surendra Gurjar</p>
+                <h3 data-en="Connoisseur Desk" data-hi="विशेषज्ञ डेस्क">Connoisseur Desk</h3>
+                <p><i class="fa-solid fa-user"></i> <span data-en="Founder: Surendra Gurjar" data-hi="संस्थापक: सुरेंद्र गुर्जर">Founder: Surendra Gurjar</span></p>
                 <p><i class="fa-solid fa-location-dot"></i> Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
                 <p><i class="fa-solid fa-phone"></i> +91 95713 25362</p>
                 <p><i class="fa-solid fa-envelope"></i> jaymatainternational26@gmail.com</p>
@@ -119,7 +85,24 @@
         </div>
     </footer>
 
+    <!-- Dual Language Core Logic Script -->
     <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const btn = document.getElementById('lang-btn');
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            
+            // Toggle Button Visual text Indicator
+            btn.innerText = currentLang === 'en' ? 'HI' : 'EN';
+            
+            // Loop and translate elements containing dataset tags
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.innerText = element.getAttribute(`data-${currentLang}`);
+            });
+        }
+
+        // Mobile Menu toggle code
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
         menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });

@@ -12,32 +12,31 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Our Legacy</a>
                 <a href="collection.html" class="nav-link">The Collection</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link active">Private Consultation</a>
             </nav>
             <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
-    <!-- Split-screen Contact panels -->
     <section class="section" style="padding-top: 140px;">
         <div class="container">
             <div class="contact-wrapper">
                 
-                <!-- Left Info Details Panel -->
                 <div class="contact-details-panel">
                     <span class="section-subtitle" style="color: var(--gold-accent);">BY INVITATION ONLY</span>
                     <h2 class="section-title" style="color: #ffffff; text-align: left; margin-bottom: 20px;">Schedule Architectural Consultation</h2>
-                    <p style="color: #aaaaaa; margin-bottom: 40px; line-height: 1.8;">Our premium curators assist high-profile architects, premium interior designers, and luxury private estate owners globally. Reach out to coordinate direct site-visits or plan a personal walkthrough at our stockyard center.</p>
+                    <p style="color: #aaaaaa; margin-bottom: 40px; line-height: 1.8;">Our premium curators assist high-profile architects, interior designers, and estate owners. Reach out to coordinate direct site-visits or plan a personal walkthrough at our stockyard center.</p>
                     
                     <div class="info-block">
-                        <div class="info-icon"><i class="fa-solid fa-gem"></i></div>
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div>
                             <h4>Elite Experience Center</h4>
                             <p>Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
@@ -59,13 +58,11 @@
                     </div>
                 </div>
 
-                <!-- Right Contact Form Panel -->
                 <div class="contact-form-panel">
-                    <!-- Setup Note: Link Formspree endpoint URL below inside action attribute once created -->
                     <form action="https://formspree.io/f/your-form-id-here" method="POST" class="luxury-form">
                         <div class="form-group">
                             <label>FULL NAME / ARCHITECT FIRM</label>
-                            <input type="text" name="name" required placeholder="e.g. Sanjay Puri Architects / Devendra Mehra">
+                            <input type="text" name="name" required placeholder="e.g. Sanjay Puri Architects">
                         </div>
                         <div class="form-group">
                             <label>PREMIUM EMAIL ADDRESS</label>
@@ -81,12 +78,11 @@
                                 <option value="italian-marble">Imported Italian Marble</option>
                                 <option value="quartzite">Rare Backlit Quartzite</option>
                                 <option value="granite">Luxury High-Gloss Granite</option>
-                                <option value="custom">Bespoke Architectural Project</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>PROJECT DESCRIPTION & BRIEF</label>
-                            <textarea name="message" rows="5" placeholder="Tell us about your villa, residential estate, penthouse or commercial building requirements..."></textarea>
+                            <textarea name="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%; letter-spacing: 2px;">REQUEST LUXURY SAMPLES</button>
                     </form>
@@ -96,7 +92,6 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
@@ -106,7 +101,9 @@
             <div class="footer-links">
                 <h3>Navigation</h3>
                 <a href="index.html">Home</a>
+                <a href="about.html">Our Legacy</a>
                 <a href="collection.html">The Collection</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Private Consultation</a>
             </div>
             <div class="footer-contact">
@@ -125,9 +122,7 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
 </body>
 </html>

@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Mata International | Luxury Marble & Granite Kishangarh</title>
-    <!-- Google Fonts: Playfair Display & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Header -->
+    <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">Our Legacy</a>
                 <a href="collection.html" class="nav-link">The Collection</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link">Private Consultation</a>
             </nav>
             <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
-    <!-- Luxury Video/Image Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <!-- Brand Philosophy Section -->
+    <!-- Brand Philosophy -->
     <section class="section philosophy">
         <div class="container text-center max-width-700">
             <span class="section-subtitle">THE ART OF CRAFTSMANSHIP</span>
@@ -101,7 +101,9 @@
             <div class="footer-links">
                 <h3>Navigation</h3>
                 <a href="index.html">Home</a>
+                <a href="about.html">Our Legacy</a>
                 <a href="collection.html">The Collection</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="contact.html">Private Consultation</a>
             </div>
             <div class="footer-contact">
@@ -120,9 +122,7 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
 </body>
 </html>

@@ -3,16 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Mata International | Luxury Marble & Granite Kishangarh</title>
+    <title>Jay Mata International | Luxury Marble & Granite</title>
+    <!-- Premium Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.0">
+
+    <!-- INTERNAL LUXURY CSS (No external file needed now!) -->
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;         /* Deep Premium Dark Background */
+            --bg-card: #141414;         /* Rich Charcoal Contrast for Cards */
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --gold-accent: #d4af37;     /* Pure Metallic Gold */
+            --gold-hover: #f3e5ab;      /* Sparkling Champagne Gold */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark) !important;
+            color: var(--text-white);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;
+        }
+
+        .section { padding: 90px 0; background-color: var(--bg-dark); }
+        .bg-light { background-color: #111111 !important; }
+        .text-center { text-align: center; }
+        .max-width-700 { max-width: 700px; margin: 0 auto; }
+
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: 1px; }
+        .section-subtitle { font-size: 11px; letter-spacing: 4px; color: var(--gold-accent); margin-bottom: 12px; text-transform: uppercase; display: block; }
+        .section-title { font-size: 36px; margin-bottom: 30px; color: var(--text-white); position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background-color: var(--gold-accent); }
+
+        /* Premium Navigation Bar */
+        .navbar {
+            position: absolute; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000;
+            border-bottom: 1px solid rgba(214, 175, 55, 0.2); background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); font-size: 24px; letter-spacing: 2px; color: var(--text-white); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--gold-accent); font-weight: 300; margin-left: 5px; }
+        
+        .nav-menu a { color: var(--text-white); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-left: 30px; transition: var(--transition); font-weight: 500; }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--gold-accent); }
+
+        .lang-switcher { margin-left: 20px; }
+        #lang-btn { background: transparent; border: 1px solid var(--gold-accent); color: var(--gold-accent); padding: 6px 16px; font-size: 11px; cursor: pointer; font-weight: 600; transition: var(--transition); letter-spacing: 1px; }
+        #lang-btn:hover { background-color: var(--gold-accent); color: #0a0a0a; }
+        .menu-toggle { display: none; color: var(--text-white); font-size: 24px; cursor: pointer; }
+
+        /* Elegant Hero Layout */
+        .hero {
+            height: 100vh; min-height: 700px; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; position: relative; display: flex; align-items: center;
+        }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.5), rgba(10,10,10,0.95)); }
+        .hero-content { position: relative; z-index: 10; padding-top: 80px; }
+        .hero-title { font-size: 56px; line-height: 1.2; max-width: 850px; margin-bottom: 24px; color: #ffffff; }
+        .hero-desc { font-size: 16px; color: #cccccc; max-width: 650px; margin-bottom: 40px; font-weight: 300; line-height: 1.8; }
+
+        /* Call To Action Buttons */
+        .btn { display: inline-block; padding: 15px 38px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 600; transition: var(--transition); }
+        .btn-primary { background-color: var(--gold-accent); color: #0a0a0a; box-shadow: 0 4px 15px rgba(214,175,55,0.2); }
+        .btn-primary:hover { background-color: var(--gold-hover); transform: translateY(-2px); }
+        .btn-secondary { border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); margin-left: 15px; }
+        .btn-secondary:hover { border-color: var(--gold-accent); color: var(--gold-accent); background-color: rgba(214,175,55,0.05); transform: translateY(-2px); }
+
+        /* Responsive Grid Matrix */
+        .grid-3 { display: flex; flex-wrap: wrap; margin-top: 40px; gap: 30px; }
+        .stone-card { flex: 1; min-width: 300px; background-color: var(--bg-card); border: 1px solid rgba(214,175,55,0.1); transition: var(--transition); }
+        .stone-card:hover { transform: translateY(-10px); border-color: var(--gold-accent); box-shadow: 0 15px 40px rgba(0,0,0,0.6); }
+        .stone-img-container { height: 260px; overflow: hidden; }
+        .stone-img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .stone-card:hover .stone-img { transform: scale(1.06); }
+        .stone-info { padding: 30px; }
+        .stone-info h3 { font-size: 22px; color: #ffffff; margin-bottom: 12px; }
+        .stone-info p { font-size: 14px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; }
+        .card-link { color: var(--gold-accent); text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+
+        /* Luxury Footer Configuration */
+        footer { background-color: #050505; padding: 80px 0 40px 0; border-top: 2px solid var(--gold-accent); margin-top: 50px; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-about { width: 35%; min-width: 280px; }
+        .footer-about p { color: var(--text-muted); font-size: 14px; margin-top: 20px; line-height: 1.8; }
+        .footer-links { width: 20%; min-width: 150px; }
+        .footer-links h3, .footer-contact h3 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--gold-accent); font-weight: 600; }
+        .footer-links a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 15px; transition: var(--transition); }
+        .footer-links a:hover { color: var(--gold-accent); padding-left: 5px; }
+        .footer-contact { width: 35%; min-width: 280px; color: var(--text-muted); }
+        .footer-contact p { margin-bottom: 15px; font-size: 14px; display: flex; align-items: flex-start; }
+        .footer-contact i { color: var(--gold-accent); margin-right: 12px; margin-top: 4px; font-size: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 12px; color: #555555; margin-top: 60px; }
+
+        /* 100% Mobile & Tablet Responsiveness System */
+        @media (max-width: 900px) {
+            .navbar { padding: 20px 0; }
+            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+            .nav-menu.active { display: block; }
+            .nav-menu a { display: block; margin: 20px 0; font-size: 14px; }
+            .menu-toggle { display: block; order: 3; }
+            .lang-switcher { margin-left: auto; margin-right: 20px; order: 2; }
+            .hero-title { font-size: 38px; }
+            .hero-desc { font-size: 14px; }
+            .btn { width: 100%; text-align: center; margin-bottom: 15px; margin-left: 0 !important; }
+            .grid-3, .footer-grid { flex-direction: column; }
+            .stone-card, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation Bar -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
@@ -25,6 +142,7 @@
                 <a href="contact.html" class="nav-link" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
             </nav>
 
+            <!-- Language Switcher Switch -->
             <div class="lang-switcher">
                 <button id="lang-btn" onclick="toggleLanguage()">HI</button>
             </div>
@@ -33,13 +151,13 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Showcase Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="hero-tagline" data-en="Timeless Masterpieces Carved By Nature" data-hi="प्रकृति द्वारा तराशे गए सदाबहार शाहकार">Timeless Masterpieces Carved By Nature</span>
             <h1 class="hero-title" data-en="Luxury Living Begins With Premium Stone" data-hi="लक्जरी लिविंग की शुरुआत प्रीमियम पत्थरों से होती है">Luxury Living Begins With Premium Stone</h1>
-            <p class="hero-desc" data-en="Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite." data-hi="जय माता इंटरनेशनल मार्बल एंड ग्रेनाइट द्वारा विशिष्ट स्थानों के लिए तैयार किए गए विदेशी इतालवी मार्बल, दुर्लभ वास्तुशिल्प क्वार्टजाइट और शानदार ग्रेनाइट के हमारे चुने हुए कलेक्शन को देखें।">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
+            <p class="hero-desc" data-en="Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite." data-hi="जय माता International मार्बल एंड ग्रेनाइट द्वारा विशिष्ट स्थानों के लिए तैयार किए गए विदेशी इतालवी मार्बल, दुर्लभ वास्तुशिल्प क्वार्टजाइट और शानदार ग्रेनाइट के हमारे चुने हुए कलेक्शन को देखें।">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
             <div class="hero-cta-group">
                 <a href="collection.html" class="btn btn-primary" data-en="Explore Collection" data-hi="कलेक्शन देखें">Explore Collection</a>
                 <a href="contact.html" class="btn btn-secondary" data-en="Book VIP Consultation" data-hi="वीआईपी परामर्श बुक करें">Book VIP Consultation</a>
@@ -47,7 +165,7 @@
         </div>
     </section>
 
-    <!-- Brand Philosophy -->
+    <!-- Core Brand Philosophy -->
     <section class="section philosophy">
         <div class="container text-center max-width-700">
             <span class="section-subtitle" data-en="THE ART OF CRAFTSMANSHIP" data-hi="शिल्पकला की कला">THE ART OF CRAFTSMANSHIP</span>
@@ -56,7 +174,7 @@
         </div>
     </section>
 
-    <!-- Featured Categories Grid -->
+    <!-- Product Category Matrix Grid -->
     <section class="section bg-light">
         <div class="container">
             <span class="section-subtitle" data-en="OUR CURATED EXHIBITIONS" data-hi="हमारा विशेष कलेक्शन">OUR CURATED EXHIBITIONS</span>
@@ -97,7 +215,7 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
+    <!-- Footer Area Components -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
@@ -125,6 +243,7 @@
         </div>
     </footer>
 
+    <!-- Dual Language Switcher & Responsive Menu Logic Scripts -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
@@ -135,9 +254,13 @@
                 element.innerText = element.getAttribute(`data-${currentLang}`);
             });
         }
+
+        // Mobile responsive side-drawer slide system activation
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+        menuToggle.addEventListener('click', () => { 
+            navMenu.classList.toggle('active'); 
+        });
     </script>
 </body>
 </html>

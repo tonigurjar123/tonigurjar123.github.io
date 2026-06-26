@@ -6,9 +6,74 @@
     <title>VIP CONSULTATION | Jay Mata International</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;         
+            --bg-card: #141414;         
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --gold-accent: #d4af37;     
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-dark) !important; color: var(--text-white); font-family: var(--font-sans); overflow-x: hidden; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 90px 0; background-color: var(--bg-dark); }
+        h1, h2 { font-family: var(--font-serif); font-weight: 600; }
+        .section-subtitle { font-size: 11px; letter-spacing: 4px; color: var(--gold-accent); margin-bottom: 12px; text-transform: uppercase; display: block; }
+        .section-title { font-size: 32px; margin-bottom: 24px; color: var(--text-white); position: relative; padding-bottom: 15px; }
+        
+        .navbar { position: absolute; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000; border-bottom: 1px solid rgba(214, 175, 55, 0.2); background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); font-size: 24px; letter-spacing: 2px; color: var(--text-white); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--gold-accent); font-weight: 300; margin-left: 5px; }
+        .nav-menu a { color: var(--text-white); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-left: 30px; transition: var(--transition); font-weight: 500; }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--gold-accent); }
+        .menu-toggle { display: none; color: var(--text-white); font-size: 24px; cursor: pointer; }
+
+        .contact-wrapper { display: flex; justify-content: space-between; margin-top: 50px; gap: 40px; }
+        .contact-details-panel { width: 45%; }
+        .contact-form-panel { width: 50%; background-color: var(--bg-card); padding: 40px; border: 1px solid rgba(214,175,55,0.1); }
+        .info-block { margin-bottom: 25px; color: var(--text-muted); }
+        .info-block i { color: var(--gold-accent); margin-right: 12px; font-size: 18px; }
+        .info-block h4 { color: #ffffff; font-size: 18px; margin-bottom: 5px; font-weight: 500; font-family: var(--font-sans); }
+        .info-block p { font-size: 14px; }
+
+        .luxury-form .form-group { margin-bottom: 25px; }
+        .luxury-form label { display: block; font-size: 10px; letter-spacing: 2px; color: var(--gold-accent); margin-bottom: 8px; }
+        .luxury-form input, .luxury-form select, .luxury-form textarea { width: 100%; background-color: #0a0a0a; border: 1px solid rgba(255,255,255,0.1); padding: 14px; color: white; font-family: var(--font-sans); transition: var(--transition); }
+        .luxury-form input:focus, .luxury-form select:focus, .luxury-form textarea:focus { border-color: var(--gold-accent); outline: none; background-color: #141414; }
+        .btn { display: inline-block; padding: 15px 38px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 600; transition: var(--transition); border: none; cursor: pointer; }
+        .btn-primary { background-color: var(--gold-accent); color: #0a0a0a; }
+        .btn-primary:hover { background-color: var(--gold-hover); }
+
+        footer { background-color: #050505; padding: 80px 0 40px 0; border-top: 2px solid var(--gold-accent); margin-top: 60px; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-about { width: 35%; min-width: 280px; }
+        .footer-about p { color: var(--text-muted); font-size: 14px; margin-top: 20px; line-height: 1.8; }
+        .footer-links { width: 20%; min-width: 150px; }
+        .footer-links h3, .footer-contact h3 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--gold-accent); font-weight: 600; }
+        .footer-links a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 15px; transition: var(--transition); }
+        .footer-links a:hover { color: var(--gold-accent); padding-left: 5px; }
+        .footer-contact { width: 35%; min-width: 280px; color: var(--text-muted); }
+        .footer-contact p { margin-bottom: 15px; font-size: 14px; display: flex; align-items: flex-start; }
+        .footer-contact i { color: var(--gold-accent); margin-right: 12px; margin-top: 4px; font-size: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 12px; color: #555555; margin-top: 60px; }
+
+        @media (max-width: 900px) {
+            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); }
+            .nav-menu.active { display: block; }
+            .nav-menu a { display: block; margin: 20px 0; }
+            .menu-toggle { display: block; }
+            .contact-wrapper, .footer-grid { flex-direction: column; }
+            .contact-details-panel, .contact-form-panel, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+        }
+    </style>
 </head>
 <body>
 
@@ -29,65 +94,37 @@
     <section class="section" style="padding-top: 140px;">
         <div class="container">
             <div class="contact-wrapper">
-                
                 <div class="contact-details-panel">
-                    <span class="section-subtitle" style="color: var(--gold-accent);">BY INVITATION ONLY</span>
-                    <h2 class="section-title" style="color: #ffffff; text-align: left; margin-bottom: 20px;">Schedule Architectural Consultation</h2>
-                    <p style="color: #aaaaaa; margin-bottom: 40px; line-height: 1.8;">Our premium curators assist high-profile architects, interior designers, and estate owners. Reach out to coordinate direct site-visits or plan a personal walkthrough at our stockyard center.</p>
-                    
+                    <span class="section-subtitle">BY INVITATION ONLY</span>
+                    <h2 class="section-title" style="text-align: left; color: #ffffff;">Schedule Consultation</h2>
+                    <p style="color: #aaaaaa; margin-bottom: 40px; line-height: 1.8;">Reach out to coordinate direct site-visits or plan a personal walkthrough at our stockyard center on Makrana Road.</p>
                     <div class="info-block">
-                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h4>Elite Experience Center</h4>
-                            <p>Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
-                        </div>
+                        <h4><i class="fa-solid fa-location-dot"></i> Experience Center</h4>
+                        <p>Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
                     </div>
                     <div class="info-block">
-                        <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                        <div>
-                            <h4>Direct Management Line</h4>
-                            <p>+91 95713 25362 (Surendra Gurjar)</p>
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-icon"><i class="fa-solid fa-envelope-open"></i></div>
-                        <div>
-                            <h4>Digital Inquiries</h4>
-                            <p>jaymatainternational26@gmail.com</p>
-                        </div>
+                        <h4><i class="fa-solid fa-phone-volume"></i> Direct Line</h4>
+                        <p>+91 95713 25362 (Surendra Gurjar)</p>
                     </div>
                 </div>
 
                 <div class="contact-form-panel">
                     <form action="https://formspree.io/f/your-form-id-here" method="POST" class="luxury-form">
                         <div class="form-group">
-                            <label>FULL NAME / ARCHITECT FIRM</label>
-                            <input type="text" name="name" required placeholder="e.g. Sanjay Puri Architects">
+                            <label>FULL NAME</label>
+                            <input type="text" name="name" required placeholder="e.g. Sanjay Puri">
                         </div>
                         <div class="form-group">
-                            <label>PREMIUM EMAIL ADDRESS</label>
+                            <label>PREMIUM EMAIL</label>
                             <input type="email" name="email" required placeholder="name@domain.com">
                         </div>
                         <div class="form-group">
-                            <label>DIRECT CONTACT NUMBER</label>
+                            <label>CONTACT NUMBER</label>
                             <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
                         </div>
-                        <div class="form-group">
-                            <label>INTERESTED SURFACE CATEGORY</label>
-                            <select name="stone-type">
-                                <option value="italian-marble">Imported Italian Marble</option>
-                                <option value="quartzite">Rare Backlit Quartzite</option>
-                                <option value="granite">Luxury High-Gloss Granite</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>PROJECT DESCRIPTION & BRIEF</label>
-                            <textarea name="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; letter-spacing: 2px;">REQUEST LUXURY SAMPLES</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">REQUEST LUXURY SAMPLES</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </section>

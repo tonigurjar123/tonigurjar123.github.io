@@ -6,9 +6,72 @@
     <title>VISUAL GALLERY | Jay Mata International</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;         
+            --bg-card: #141414;         
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --gold-accent: #d4af37;     
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-dark) !important; color: var(--text-white); font-family: var(--font-sans); overflow-x: hidden; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 90px 0; background-color: var(--bg-dark); }
+        h1, h3 { font-family: var(--font-serif); font-weight: 600; }
+        .section-subtitle { font-size: 11px; letter-spacing: 4px; color: var(--gold-accent); margin-bottom: 12px; text-transform: uppercase; display: block; }
+        .banner-title { font-size: 46px; color: #ffffff; position: relative; z-index: 10; }
+        
+        .navbar { position: absolute; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000; border-bottom: 1px solid rgba(214, 175, 55, 0.2); background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); font-size: 24px; letter-spacing: 2px; color: var(--text-white); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--gold-accent); font-weight: 300; margin-left: 5px; }
+        .nav-menu a { color: var(--text-white); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-left: 30px; transition: var(--transition); font-weight: 500; }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--gold-accent); }
+        .menu-toggle { display: none; color: var(--text-white); font-size: 24px; cursor: pointer; }
+
+        .page-banner { padding: 180px 0 100px 0; background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; position: relative; text-align: center; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.6), rgba(10,10,10,0.95)); }
+        
+        .grid-3 { display: flex; flex-wrap: wrap; margin-top: 40px; gap: 30px; }
+        .gallery-item { width: 31.6%; min-width: 300px; height: 360px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, rgba(10,10,10,0.95), transparent); opacity:0; transition: var(--transition); display: flex; align-items: flex-end; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-details { padding: 30px; }
+        .stone-origin { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-accent); display: block; margin-bottom: 8px; }
+        .gallery-details h3 { font-size: 22px; color: #ffffff; margin-bottom: 10px; }
+
+        footer { background-color: #050505; padding: 80px 0 40px 0; border-top: 2px solid var(--gold-accent); margin-top: 60px; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-about { width: 35%; min-width: 280px; }
+        .footer-about p { color: var(--text-muted); font-size: 14px; margin-top: 20px; line-height: 1.8; }
+        .footer-links { width: 20%; min-width: 150px; }
+        .footer-links h3, .footer-contact h3 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--gold-accent); font-weight: 600; }
+        .footer-links a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 15px; transition: var(--transition); }
+        .footer-links a:hover { color: var(--gold-accent); padding-left: 5px; }
+        .footer-contact { width: 35%; min-width: 280px; color: var(--text-muted); }
+        .footer-contact p { margin-bottom: 15px; font-size: 14px; display: flex; align-items: flex-start; }
+        .footer-contact i { color: var(--gold-accent); margin-right: 12px; margin-top: 4px; font-size: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 12px; color: #555555; margin-top: 60px; }
+
+        @media (max-width: 900px) {
+            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); }
+            .nav-menu.active { display: block; }
+            .nav-menu a { display: block; margin: 20px 0; }
+            .menu-toggle { display: block; }
+            .banner-title { font-size: 34px; }
+            .grid-3, .footer-grid { flex-direction: column; }
+            .gallery-item, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+        }
+    </style>
 </head>
 <body>
 
@@ -28,10 +91,9 @@
 
     <section class="page-banner">
         <div class="hero-overlay"></div>
-        <div class="container text-center position-relative">
-            <span class="section-subtitle" style="color: var(--gold-accent);">SPATIAL INSPIRATIONS</span>
+        <div class="container position-relative" style="z-index: 10;">
+            <span class="section-subtitle">SPATIAL INSPIRATIONS</span>
             <h1 class="banner-title">Architectural Applications</h1>
-            <p style="max-width: 600px; margin: 0 auto; color: #cccccc;">Witness how our stones redefine residential interiors, grand lounges, and premium culinary spaces.</p>
         </div>
     </section>
 
@@ -44,7 +106,6 @@
                         <div class="gallery-details">
                             <span class="stone-origin">Italian Book-match Layout</span>
                             <h3>Grand Lounge Flooring</h3>
-                            <p>Seamless crystal reflective marble installation creating an expansive aura.</p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +115,6 @@
                         <div class="gallery-details">
                             <span class="stone-origin">Exotic Dark Granite</span>
                             <h3>Bespoke Kitchen Countertops</h3>
-                            <p>High-integrity, heat-resistant obsidian textures optimized for luxury utility.</p>
                         </div>
                     </div>
                 </div>
@@ -64,37 +124,6 @@
                         <div class="gallery-details">
                             <span class="stone-origin">Statuario Vein Cladding</span>
                             <h3>Monolithic Bathroom Panels</h3>
-                            <p>Bookmatched marble arrays cladding private wellness spaces gracefully.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Entry Foyer Setup">
-                    <div class="gallery-overlay">
-                        <div class="gallery-details">
-                            <span class="stone-origin">Onyx Backlit Installation</span>
-                            <h3>Luminous Entry Foyers</h3>
-                            <p>Translucent amber stones creating powerful, striking structural entrance designs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Premium Stone External Cladding">
-                    <div class="gallery-overlay">
-                        <div class="gallery-details">
-                            <span class="stone-origin">Weatherproof Granite Facade</span>
-                            <h3>High-End External Cladding</h3>
-                            <p>Preserving structural magnificence against elements with deep-toned raw granites.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Bespoke Marble Dining Surface">
-                    <div class="gallery-overlay">
-                        <div class="gallery-details">
-                            <span class="stone-origin">Custom Artifact Matrix</span>
-                            <h3>Bespoke Marble Dining Slabs</h3>
-                            <p>Hand-cut calibrated surfaces configured exclusively for elite customized furniture.</p>
                         </div>
                     </div>
                 </div>

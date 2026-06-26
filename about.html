@@ -3,12 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUR LEGACY | Jay Mata International</title>
+    <title>about | Jay Mata International</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;         
+            --bg-card: #141414;         
+            --text-white: #ffffff;
+            --text-muted: #b3b3b3;
+            --gold-accent: #d4af37;     
+            --gold-hover: #f3e5ab;      
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-dark) !important; color: var(--text-white); font-family: var(--font-sans); overflow-x: hidden; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 90px 0; background-color: var(--bg-dark); }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: 1px; }
+        .section-subtitle { font-size: 11px; letter-spacing: 4px; color: var(--gold-accent); margin-bottom: 12px; text-transform: uppercase; display: block; }
+        .section-title { font-size: 36px; margin-bottom: 30px; color: var(--text-white); position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 2px; background-color: var(--gold-accent); }
+        
+        .navbar { position: absolute; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000; border-bottom: 1px solid rgba(214, 175, 55, 0.2); background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); font-size: 24px; letter-spacing: 2px; color: var(--text-white); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--gold-accent); font-weight: 300; margin-left: 5px; }
+        .nav-menu a { color: var(--text-white); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-left: 30px; transition: var(--transition); font-weight: 500; }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--gold-accent); }
+        .menu-toggle { display: none; color: var(--text-white); font-size: 24px; cursor: pointer; }
+
+        .page-banner { padding: 180px 0 100px 0; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; position: relative; text-align: center; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.6), rgba(10,10,10,0.95)); }
+        .banner-title { font-size: 46px; color: #ffffff; position: relative; z-index: 10; }
+        
+        .about-wrapper { display: flex; justify-content: space-between; gap: 40px; margin-top: 40px; }
+        .about-details { width: 55%; }
+        .about-details p { color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+        .about-features { width: 40%; background-color: var(--bg-card); padding: 40px; border-left: 3px solid var(--gold-accent); border-top: 1px solid rgba(214,175,55,0.1); border-right: 1px solid rgba(214,175,55,0.1); border-bottom: 1px solid rgba(214,175,55,0.1); }
+        .about-features h3 { font-size: 24px; color: var(--gold-accent); margin-bottom: 20px; }
+        .about-features ul { list-style: none; }
+        .about-features li { margin-bottom: 15px; color: #cccccc; font-size: 15px; display: flex; align-items: center; }
+        .about-features i { color: var(--gold-accent); margin-right: 12px; }
+
+        footer { background-color: #050505; padding: 80px 0 40px 0; border-top: 2px solid var(--gold-accent); margin-top: 90px; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-about { width: 35%; min-width: 280px; }
+        .footer-about p { color: var(--text-muted); font-size: 14px; margin-top: 20px; line-height: 1.8; }
+        .footer-links { width: 20%; min-width: 150px; }
+        .footer-links h3, .footer-contact h3 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--gold-accent); font-weight: 600; }
+        .footer-links a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 15px; transition: var(--transition); }
+        .footer-links a:hover { color: var(--gold-accent); padding-left: 5px; }
+        .footer-contact { width: 35%; min-width: 280px; color: var(--text-muted); }
+        .footer-contact p { margin-bottom: 15px; font-size: 14px; display: flex; align-items: flex-start; }
+        .footer-contact i { color: var(--gold-accent); margin-right: 12px; margin-top: 4px; font-size: 16px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 12px; color: #555555; margin-top: 60px; }
+
+        @media (max-width: 900px) {
+            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); }
+            .nav-menu.active { display: block; }
+            .nav-menu a { display: block; margin: 20px 0; }
+            .menu-toggle { display: block; }
+            .banner-title { font-size: 34px; }
+            .about-wrapper, .footer-grid { flex-direction: column; }
+            .about-details, .about-features, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +82,7 @@
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link active">about</a>
+                <a href="about.html" class="nav-link active">Our Legacy</a>
                 <a href="collection.html" class="nav-link">The Collection</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
                 <a href="contact.html" class="nav-link">Private Consultation</a>
@@ -28,29 +93,28 @@
 
     <section class="page-banner">
         <div class="hero-overlay"></div>
-        <div class="container text-center position-relative">
-            <span class="section-subtitle" style="color: var(--gold-accent);">FOUNDED ON TRUST</span>
+        <div class="container position-relative" style="z-index: 10;">
+            <span class="section-subtitle">FOUNDED ON TRUST</span>
             <h1 class="banner-title">Our Heritage & Vision</h1>
-            <p style="max-width: 600px; margin: 0 auto; color: #cccccc;">Redefining structural architecture with pristine marble slabs and masterfully crafted granite structures.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-details-panel" style="width: 50%; padding-right: 30px;">
+            <div class="about-wrapper">
+                <div class="about-details">
                     <span class="section-subtitle">THE CONNOISSEUR'S CHOICE</span>
                     <h2 class="section-title" style="text-align: left; padding-bottom: 10px; color: #ffffff;">Crafting Elite Spaces</h2>
-                    <p style="color: #aaaaaa; margin-bottom: 20px; line-height: 1.8;">Based in the premier stone capital of Kishangarh, Rajasthan, <strong>Jay Mata International Marble & Granite</strong> stands as a benchmark of uncompromised quality. We specialize in processing raw architectural beauty into high-gloss, pristine surface elements for luxury villas, corporate landmarks, and premium residential spaces.</p>
-                    <p style="color: #aaaaaa; line-height: 1.8;">Under the leadership of <strong>Surendra Gurjar</strong>, our philosophy centers around three core pillars: precise calibration, diamond-grade polishing, and absolute transparency in selecting natural patterns.</p>
+                    <p>Based in the premier stone capital of Kishangarh, Rajasthan, <strong>Jay Mata International Marble & Granite</strong> stands as a benchmark of uncompromised quality. We specialize in processing raw architectural beauty into high-gloss, pristine surface elements for luxury villas, corporate landmarks, and premium residential spaces.</p>
+                    <p>Under the leadership of <strong>Surendra Gurjar</strong>, our philosophy centers around three core pillars: precise calibration, diamond-grade polishing, and absolute transparency in selecting natural patterns.</p>
                 </div>
-                <div class="contact-form-panel" style="width: 45%; background-color: var(--bg-card); padding: 35px; border-left: 3px solid var(--gold-accent);">
-                    <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--gold-accent); margin-bottom: 15px;">Why Jay Mata International?</h3>
-                    <ul style="list-style: none; color: #cccccc;">
-                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: var(--gold-accent); margin-right: 10px;"></i> Direct quarry alliances ensuring first-choice premium lots.</li>
-                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: var(--gold-accent); margin-right: 10px;"></i> Advanced processing setup on Makrana Road, Kishangarh.</li>
-                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: var(--gold-accent); margin-right: 10px;"></i> Meticulous inspection criteria for vein consistency.</li>
-                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: var(--gold-accent); margin-right: 10px;"></i> Dedicated client handling desk managed directly by experts.</li>
+                <div class="about-features">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Direct quarry alliances for premium lots.</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced processing on Makrana Road.</li>
+                        <li><i class="fa-solid fa-check"></i> Meticulous inspection for vein consistency.</li>
+                        <li><i class="fa-solid fa-check"></i> Managed directly by industry experts.</li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +137,7 @@
             </div>
             <div class="footer-contact">
                 <h3>Connoisseur Desk</h3>
-                <p><i class="fa-solid fa-user"></i> Founder: Surendra Gurjar</p>
+                <p><i class="fa-solid fa-user"></i> <span>Founder: Surendra Gurjar</span></p>
                 <p><i class="fa-solid fa-location-dot"></i> Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
                 <p><i class="fa-solid fa-phone"></i> +91 95713 25362</p>
                 <p><i class="fa-solid fa-envelope"></i> jaymatainternational26@gmail.com</p>

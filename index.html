@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
 </head>
 <body>
 
@@ -25,7 +25,6 @@
                 <a href="contact.html" class="nav-link" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
             </nav>
 
-            <!-- Luxury Language Selector Switch -->
             <div class="lang-switcher">
                 <button id="lang-btn" onclick="toggleLanguage()">HI</button>
             </div>
@@ -57,6 +56,47 @@
         </div>
     </section>
 
+    <!-- Featured Categories Grid -->
+    <section class="section bg-light">
+        <div class="container">
+            <span class="section-subtitle" data-en="OUR CURATED EXHIBITIONS" data-hi="हमारा विशेष कलेक्शन">OUR CURATED EXHIBITIONS</span>
+            <h2 class="section-title text-center" data-en="Architectural Masterpieces" data-hi="वास्तुकला के उत्कृष्ट नमूने">Architectural Masterpieces</h2>
+            
+            <div class="grid-3">
+                <div class="stone-card">
+                    <div class="stone-img-container">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Exotic Italian Marble" class="stone-img">
+                    </div>
+                    <div class="stone-info">
+                        <h3 data-en="Exotic Italian Marble" data-hi="विदेशी इतालवी मार्बल">Exotic Italian Marble</h3>
+                        <p data-en="Statuary, Calacatta Gold, and Carrara variants displaying majestic, artistic dramatic veining." data-hi="शानदार और कलात्मक नक्काशी वाले स्टेट्यूरी, कैलाकट्टा गोल्ड और करारा मार्बल।">Statuary, Calacatta Gold, and Carrara variants displaying majestic, artistic dramatic veining.</p>
+                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="stone-card">
+                    <div class="stone-img-container">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Exotic Quartzite & Onyx" class="stone-img">
+                    </div>
+                    <div class="stone-info">
+                        <h3 data-en="Rare Onyx & Quartzite" data-hi="दुर्लभ ओनिक्स और क्वार्टजाइट">Rare Onyx & Quartzite</h3>
+                        <p data-en="Translucent back-lit masterpieces that redefine ultra-luxury living and accent spaces." data-hi="पारदर्शी बैक-लिट पत्थर जो अल्ट्रा-लक्जरी लिविंग और खास स्पेस को नया रूप देते हैं।">Translucent back-lit masterpieces that redefine ultra-luxury living and accent spaces.</p>
+                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="stone-card">
+                    <div class="stone-img-container">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Premium Granites" class="stone-img">
+                    </div>
+                    <div class="stone-info">
+                        <h3 data-en="Luxury Granites" data-hi="लक्जरी ग्रेनाइट">Luxury Granites</h3>
+                        <p data-en="High-integrity premium surfaces combining bulletproof durability with deep crystal depth." data-hi="मजबूत टिकाऊपन और गहरे क्रिस्टल जैसी चमक का बेहतरीन संयोजन।">High-integrity premium surfaces combining bulletproof durability with deep crystal depth.</p>
+                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Area -->
     <footer>
         <div class="container footer-grid">
@@ -85,24 +125,16 @@
         </div>
     </footer>
 
-    <!-- Dual Language Core Logic Script -->
     <script>
         let currentLang = 'en';
-
         function toggleLanguage() {
             const btn = document.getElementById('lang-btn');
             currentLang = currentLang === 'en' ? 'hi' : 'en';
-            
-            // Toggle Button Visual text Indicator
             btn.innerText = currentLang === 'en' ? 'HI' : 'EN';
-            
-            // Loop and translate elements containing dataset tags
             document.querySelectorAll('[data-en]').forEach(element => {
                 element.innerText = element.getAttribute(`data-${currentLang}`);
             });
         }
-
-        // Mobile Menu toggle code
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
         menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });

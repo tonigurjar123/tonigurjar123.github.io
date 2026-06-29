@@ -107,9 +107,9 @@
                 <button class="tab-btn">Italian Marble Collection</button>
             </div>
 
-            <!-- AUTOMATIC PHOTO GRID (Yeh script se photos load karega) -->
+            <!-- AUTOMATIC PHOTO GRID (Path updated directly to root) -->
             <div class="grid-3" id="gallery-grid">
-                <!-- JavaScript automatic yahan 1 se lekar 25 tak ki photos generate karega -->
+                <!-- Script auto-loads images here -->
             </div>
 
         </div>
@@ -143,16 +143,16 @@
     <script>
         const grid = document.getElementById('gallery-grid');
         
-        // Yeh loop automatic 1 se lekar 25 tak ki saari images code mein generate kar dega
+        // Loop generates images from 1 to 25 based on root location
         for (let i = 1; i <= 25; i++) {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             
-            // GitHub URL space fix logic (Windows format '1 (1)' handle karne ke liye)
+            // Fixed direct file names template matching your root upload style
             const imageName = `1%20(${i})`; 
             
             item.innerHTML = `
-                <img src="italiyan/${imageName}.jpeg" onerror="this.onerror=null; this.src='italiyan/${imageName}.jpg'; this.onfailed=function(){this.src='italiyan/${imageName}.png';}" alt="Italian Marble">
+                <img src="${imageName}.jpeg" onerror="this.onerror=null; this.src='${imageName}.jpg'; this.onfailed=function(){this.src='${imageName}.png';}" alt="Italian Marble">
                 <div class="gallery-overlay">
                     <div class="gallery-details">
                         <span class="stone-origin">Imported Stock</span>
@@ -163,7 +163,6 @@
             grid.appendChild(item);
         }
 
-        // Navbar toggle logic
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
         menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });

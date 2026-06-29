@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Mata International | Luxury Marble & Granite</title>
-    <!-- Premium Fonts & Icons -->
+    <title>Jay Mata International | Luxury Marble & Granite Kishangarh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- INTERNAL LUXURY CSS (No external file needed now!) -->
+    
     <style>
         :root {
-            --bg-dark: #0a0a0a;         /* Deep Premium Dark Background */
-            --bg-card: #141414;         /* Rich Charcoal Contrast for Cards */
+            --bg-dark: #0a0a0a;         
+            --bg-card: #141414;         
             --text-white: #ffffff;
             --text-muted: #b3b3b3;
-            --gold-accent: #d4af37;     /* Pure Metallic Gold */
-            --gold-hover: #f3e5ab;      /* Sparkling Champagne Gold */
+            --gold-accent: #d4af37;     
+            --gold-hover: #f3e5ab;      
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Montserrat', sans-serif;
             --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -34,7 +32,6 @@
             color: var(--text-white);
             font-family: var(--font-sans);
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
 
         .container {
@@ -51,7 +48,7 @@
         .section-title { font-size: 36px; margin-bottom: 30px; color: var(--text-white); position: relative; padding-bottom: 15px; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background-color: var(--gold-accent); }
 
-        /* Premium Navigation Bar */
+        /* Navigation Bar */
         .navbar {
             position: absolute; top: 0; left: 0; width: 100%; padding: 25px 0; z-index: 1000;
             border-bottom: 1px solid rgba(214, 175, 55, 0.2); background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px);
@@ -68,9 +65,9 @@
         #lang-btn:hover { background-color: var(--gold-accent); color: #0a0a0a; }
         .menu-toggle { display: none; color: var(--text-white); font-size: 24px; cursor: pointer; }
 
-        /* Elegant Hero Layout */
+        /* Hero Layout */
         .hero {
-            height: 100vh; min-height: 700px; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            height: 100vh; min-height: 650px; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; position: relative; display: flex; align-items: center;
         }
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.5), rgba(10,10,10,0.95)); }
@@ -78,26 +75,32 @@
         .hero-title { font-size: 56px; line-height: 1.2; max-width: 850px; margin-bottom: 24px; color: #ffffff; }
         .hero-desc { font-size: 16px; color: #cccccc; max-width: 650px; margin-bottom: 40px; font-weight: 300; line-height: 1.8; }
 
-        /* Call To Action Buttons */
+        /* Buttons */
         .btn { display: inline-block; padding: 15px 38px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 600; transition: var(--transition); }
         .btn-primary { background-color: var(--gold-accent); color: #0a0a0a; box-shadow: 0 4px 15px rgba(214,175,55,0.2); }
         .btn-primary:hover { background-color: var(--gold-hover); transform: translateY(-2px); }
         .btn-secondary { border: 1px solid rgba(255,255,255,0.3); color: var(--text-white); margin-left: 15px; }
         .btn-secondary:hover { border-color: var(--gold-accent); color: var(--gold-accent); background-color: rgba(214,175,55,0.05); transform: translateY(-2px); }
 
-        /* Responsive Grid Matrix */
-        .grid-3 { display: flex; flex-wrap: wrap; margin-top: 40px; gap: 30px; }
-        .stone-card { flex: 1; min-width: 300px; background-color: var(--bg-card); border: 1px solid rgba(214,175,55,0.1); transition: var(--transition); }
+        /* Dynamic Grid Framework */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .stone-card { width: 100%; background-color: var(--bg-card); border: 1px solid rgba(214,175,55,0.15); transition: var(--transition); overflow: hidden; border-radius: 4px; }
         .stone-card:hover { transform: translateY(-10px); border-color: var(--gold-accent); box-shadow: 0 15px 40px rgba(0,0,0,0.6); }
-        .stone-img-container { height: 260px; overflow: hidden; }
-        .stone-img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .stone-card:hover .stone-img { transform: scale(1.06); }
-        .stone-info { padding: 30px; }
-        .stone-info h3 { font-size: 22px; color: #ffffff; margin-bottom: 12px; }
-        .stone-info p { font-size: 14px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; }
-        .card-link { color: var(--gold-accent); text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        .stone-img-container { height: 350px; overflow: hidden; }
+        .stone-img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); display: block; }
+        .stone-card:hover .stone-img { transform: scale(1.05); }
+        .stone-info { padding: 25px; text-align: center; border-top: 1px solid rgba(214,175,55,0.1); }
+        .stone-info h3 { font-size: 20px; color: #ffffff; margin-bottom: 5px; }
 
-        /* Luxury Footer Configuration */
+        /* Royal Owner Split Section */
+        .owner-split { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+        .owner-image-panel { width: 40%; position: relative; }
+        .owner-frame { width: 100%; height: 450px; border: 2px solid var(--gold-accent); padding: 15px; border-radius: 4px; background-color: #111111; box-shadow: 0 20px 40px rgba(0,0,0,0.7); }
+        .owner-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+        .owner-text-panel { width: 55%; }
+        .owner-text-panel .section-title::after { left: 0; transform: none; }
+
+        /* Footer Components */
         footer { background-color: #050505; padding: 80px 0 40px 0; border-top: 2px solid var(--gold-accent); margin-top: 50px; }
         .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
         .footer-about { width: 35%; min-width: 280px; }
@@ -111,25 +114,23 @@
         .footer-contact i { color: var(--gold-accent); margin-right: 12px; margin-top: 4px; font-size: 16px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; font-size: 12px; color: #555555; margin-top: 60px; }
 
-        /* 100% Mobile & Tablet Responsiveness System */
-        @media (max-width: 900px) {
-            .navbar { padding: 20px 0; }
-            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        /* Responsive Mobile Code */
+        @media (max-width: 767px) {
+            .nav-menu { display: none; position: absolute; top: 78px; left: 0; width: 100%; background-color: var(--bg-dark); padding: 25px 0; text-align: center; border-bottom: 1px solid rgba(214,175,55,0.3); }
             .nav-menu.active { display: block; }
             .nav-menu a { display: block; margin: 20px 0; font-size: 14px; }
-            .menu-toggle { display: block; order: 3; }
-            .lang-switcher { margin-left: auto; margin-right: 20px; order: 2; }
+            .menu-toggle { display: block; }
             .hero-title { font-size: 38px; }
-            .hero-desc { font-size: 14px; }
             .btn { width: 100%; text-align: center; margin-bottom: 15px; margin-left: 0 !important; }
-            .grid-3, .footer-grid { flex-direction: column; }
-            .stone-card, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+            
+            .grid-3, .owner-split, .footer-grid { flex-direction: column; }
+            .stone-card, .owner-image-panel, .owner-text-panel, .footer-about, .footer-links, .footer-contact { width: 100% !important; }
+            .owner-frame { height: 380px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation Bar -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
@@ -142,7 +143,6 @@
                 <a href="contact.html" class="nav-link" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
             </nav>
 
-            <!-- Language Switcher Switch -->
             <div class="lang-switcher">
                 <button id="lang-btn" onclick="toggleLanguage()">HI</button>
             </div>
@@ -151,13 +151,12 @@
         </div>
     </header>
 
-    <!-- Hero Showcase Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="hero-tagline" data-en="Timeless Masterpieces Carved By Nature" data-hi="प्रकृति द्वारा तराशे गए सदाबहार शाहकार">Timeless Masterpieces Carved By Nature</span>
             <h1 class="hero-title" data-en="Luxury Living Begins With Premium Stone" data-hi="लक्जरी लिविंग की शुरुआत प्रीमियम पत्थरों से होती है">Luxury Living Begins With Premium Stone</h1>
-            <p class="hero-desc" data-en="Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite." data-hi="जय माता International मार्बल एंड ग्रेनाइट द्वारा विशिष्ट स्थानों के लिए तैयार किए गए विदेशी इतालवी मार्बल, दुर्लभ वास्तुशिल्प क्वार्टजाइट और शानदार ग्रेनाइट के हमारे चुने हुए कलेक्शन को देखें।">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
+            <p class="hero-desc" data-en="Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite." data-hi="जय माता इंटरनेशनल मार्बल एंड ग्रेनाइट द्वारा विशिष्ट स्थानों के लिए तैयार किए गए विदेशी इतालवी मार्बल, दुर्लभ वास्तुशिल्प क्वार्टजाइट और शानदार ग्रेनाइट के हमारे चुने हुए कलेक्शन को देखें।">Discover our handpicked collection of exotic Italian marble, rare architectural quartzites, and majestic granites curated for elite spaces by Jay Mata International Marble & Granite.</p>
             <div class="hero-cta-group">
                 <a href="collection.html" class="btn btn-primary" data-en="Explore Collection" data-hi="कलेक्शन देखें">Explore Collection</a>
                 <a href="contact.html" class="btn btn-secondary" data-en="Book VIP Consultation" data-hi="वीआईपी परामर्श बुक करें">Book VIP Consultation</a>
@@ -165,74 +164,82 @@
         </div>
     </section>
 
-    <!-- Core Brand Philosophy -->
-    <section class="section philosophy">
-        <div class="container text-center max-width-700">
-            <span class="section-subtitle" data-en="THE ART OF CRAFTSMANSHIP" data-hi="शिल्पकला की कला">THE ART OF CRAFTSMANSHIP</span>
-            <h2 class="section-title" data-en="The Absolute Pinnacle of Luxury" data-hi="लक्जरी का पूर्ण शिखर">The Absolute Pinnacle of Luxury</h2>
-            <p class="section-desc" data-en="Under the visionary leadership of Surendra Gurjar, Jay Mata International brings you world-class stones sourced meticulously from prestigious global quarries. Located in the marble heartland of Kishangarh, we offer unrivaled veining, ultimate purity, and world-class finishes tailored to your dream architecture." data-hi="सुरेंद्र गुर्जर के दूरदर्शी नेतृत्व में, जय माता इंटरनेशनल आपके लिए प्रतिष्ठित वैश्विक खदानों से सावधानीपूर्वक लाए गए विश्व स्तरीय पत्थर पेश करता है। मार्बल की मुख्य भूमि किशनगढ़ में स्थित, हम आपके सपनों की वास्तुकला के अनुकूल अद्वितीय नक्काशी, अत्यधिक शुद्धता और विश्व स्तरीय फिनिश प्रदान करते हैं।">Under the visionary leadership of Surendra Gurjar, Jay Mata International brings you world-class stones sourced meticulously from prestigious global quarries. Located in the marble heartland of Kishangarh, we offer unrivaled veining, ultimate purity, and world-class finishes tailored to your dream architecture.</p>
+    <section class="section bg-light">
+        <div class="container">
+            <div class="owner-split">
+                <div class="owner-image-panel">
+                    <div class="owner-frame">
+                        <img src="owner.jpg" onerror="this.onerror=null; this.src='owner.jpeg';" alt="Surendra Gurjar - Founder">
+                    </div>
+                </div>
+                <div class="owner-text-panel">
+                    <span class="section-subtitle" data-en="LEADERSHIP & VISION" data-hi="नेतृत्व और दृष्टि">LEADERSHIP & VISION</span>
+                    <h2 class="section-title" style="text-align: left;" data-en="Meet Our Founder" data-hi="हमारे संस्थापक से मिलें">Meet Our Founder</h2>
+                    <p style="color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 20px;" data-en="Welcome to Jay Mata International Marble & Granite. Guided by our founder, Surendra Gurjar, we have dedicated ourselves to transforming architectures into royal spaces. From the historic business avenues of Kishangarh, Rajasthan, we promise absolute transparency, unparalleled stone alignment, and top-tier polishing craft for premium dream structures globally." data-hi="जय माता इंटरनेशनल मार्बल एंड ग्रेनाइट में आपका स्वागत है। हमारे संस्थापक, सुरेंद्र गुर्जर के मार्गदर्शन में, हमने वास्तुकला को शाही स्थानों में बदलने के लिए खुद को समर्पित किया है। किशनगढ़, राजस्थान के ऐतिहासिक व्यावसायिक गलियारों से, हम दुनिया भर में प्रीमियम सपनों की संरचनाओं के लिए पूर्ण पारदर्शिता, अद्वितीय पत्थर संरेखण और शीर्ष-स्तरीय पॉलिशिंग शिल्प का वादा करते हैं।">Welcome to Jay Mata International Marble & Granite. Guided by our founder, Surendra Gurjar, we have dedicated ourselves to transforming architectures into royal spaces. From the historic business avenues of Kishangarh, Rajasthan, we promise absolute transparency, unparalleled stone alignment, and top-tier polishing craft for premium dream structures globally.</p>
+                    <h4 style="color: var(--gold-accent); font-size: 20px;">Surendra Gurjar</h4>
+                    <p style="font-size: 13px; color: #777777; text-transform: uppercase; letter-spacing: 2px; margin-top: 2px;">Founder & Director</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Product Category Matrix Grid -->
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
-            <span class="section-subtitle" data-en="OUR CURATED EXHIBITIONS" data-hi="हमारा विशेष कलेक्शन">OUR CURATED EXHIBITIONS</span>
-            <h2 class="section-title text-center" data-en="Architectural Masterpieces" data-hi="वास्तुकला के उत्कृष्ट नमूने">Architectural Masterpieces</h2>
+            <span class="section-subtitle" data-en="LIVE STOCK EXCLUSIVES" data-hi="लाइव स्टॉक एक्सक्लूसिव">LIVE STOCK EXCLUSIVES</span>
+            <h2 class="section-title text-center" data-en="Our Premium Slabs Gallery" data-hi="हमारी प्रीमियम स्लैब गैलरी">Our Premium Slabs Gallery</h2>
             
             <div class="grid-3">
                 <div class="stone-card">
                     <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Exotic Italian Marble" class="stone-img">
+                        <img src="1 (1).jpeg" onerror="this.onerror=null; this.src='1 (1).jpg';" alt="Jay Mata International Luxury Slabs" class="stone-img">
                     </div>
                     <div class="stone-info">
-                        <h3 data-en="Exotic Italian Marble" data-hi="विदेशी इतालवी मार्बल">Exotic Italian Marble</h3>
-                        <p data-en="Statuary, Calacatta Gold, and Carrara variants displaying majestic, artistic dramatic veining." data-hi="शानदार और कलात्मक नक्काशी वाले स्टेट्यूरी, कैलाकट्टा गोल्ड और करारा मार्बल।">Statuary, Calacatta Gold, and Carrara variants displaying majestic, artistic dramatic veining.</p>
-                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Royal Italian Collection I</h3>
                     </div>
                 </div>
+
                 <div class="stone-card">
                     <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Exotic Quartzite & Onyx" class="stone-img">
+                        <img src="1 (2).jpeg" onerror="this.onerror=null; this.src='1 (2).jpg';" alt="Jay Mata International Luxury Slabs" class="stone-img">
                     </div>
                     <div class="stone-info">
-                        <h3 data-en="Rare Onyx & Quartzite" data-hi="दुर्लभ ओनिक्स और क्वार्टजाइट">Rare Onyx & Quartzite</h3>
-                        <p data-en="Translucent back-lit masterpieces that redefine ultra-luxury living and accent spaces." data-hi="पारदर्शी बैक-लिट पत्थर जो अल्ट्रा-लक्जरी लिविंग और खास स्पेस को नया रूप देते हैं।">Translucent back-lit masterpieces that redefine ultra-luxury living and accent spaces.</p>
-                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Royal Italian Collection II</h3>
                     </div>
                 </div>
+
                 <div class="stone-card">
                     <div class="stone-img-container">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Premium Granites" class="stone-img">
+                        <img src="1 (3).jpeg" onerror="this.onerror=null; this.src='1 (3).jpg';" alt="Jay Mata International Luxury Slabs" class="stone-img">
                     </div>
                     <div class="stone-info">
-                        <h3 data-en="Luxury Granites" data-hi="लक्जरी ग्रेनाइट">Luxury Granites</h3>
-                        <p data-en="High-integrity premium surfaces combining bulletproof durability with deep crystal depth." data-hi="मजबूत टिकाऊपन और गहरे क्रिस्टल जैसी चमक का बेहतरीन संयोजन।">High-integrity premium surfaces combining bulletproof durability with deep crystal depth.</p>
-                        <a href="collection.html" class="card-link" data-en="View Variants" data-hi="प्रकार देखें">View Variants <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Royal Italian Collection III</h3>
                     </div>
                 </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="gallery.html" class="btn btn-secondary" data-en="View Full Gallery" data-hi="पूरी गैलरी देखें">View Full Gallery</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer Area Components -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
                 <a href="#" class="logo">JAY MATA<span>INTERNATIONAL</span></a>
-                <p data-en="Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates." data-hi="लाखों वर्षों के प्राकृतिक क्रिस्टलीकरण से निर्मित वास्तुशिल्प लक्जरी। सुरेंद्र गुर्जर के नेतृत्व में, हम सीधे विश्व स्तरीय संपत्तियों तक पूर्ण भव्यता पहुंचाते हैं।">Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates.</p>
+                <p>Architectural luxury built through millions of years of natural crystallization. Spearheaded by Surendra Gurjar, we deliver absolute elegance directly to world-class estates.</p>
             </div>
             <div class="footer-links">
-                <h3 data-en="Navigation" data-hi="नेविगेशन">Navigation</h3>
-                <a href="index.html" data-en="Home" data-hi="होम">Home</a>
-                <a href="about.html" data-en="Our Legacy" data-hi="हमारी विरासत">Our Legacy</a>
-                <a href="collection.html" data-en="The Collection" data-hi="कलेक्शन">The Collection</a>
-                <a href="gallery.html" data-en="Gallery" data-hi="गैलरी">Gallery</a>
-                <a href="contact.html" data-en="Private Consultation" data-hi="परामर्श">Private Consultation</a>
+                <h3>Navigation</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">Our Legacy</a>
+                <a href="collection.html">The Collection</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Private Consultation</a>
             </div>
             <div class="footer-contact">
-                <h3 data-en="Connoisseur Desk" data-hi="विशेषज्ञ डेस्क">Connoisseur Desk</h3>
-                <p><i class="fa-solid fa-user"></i> <span data-en="Founder: Surendra Gurjar" data-hi="संस्थापक: सुरेंद्र गुर्जर">Founder: Surendra Gurjar</span></p>
+                <h3>Connoisseur Desk</h3>
+                <p><i class="fa-solid fa-user"></i> Founder: Surendra Gurjar</p>
                 <p><i class="fa-solid fa-location-dot"></i> Plot No. 508/390 Makrana Road, Village Khatoli Tehsil, Madanganj, Kishangarh, Rajasthan 305801</p>
                 <p><i class="fa-solid fa-phone"></i> +91 95713 25362</p>
                 <p><i class="fa-solid fa-envelope"></i> jaymatainternational26@gmail.com</p>
@@ -243,7 +250,6 @@
         </div>
     </footer>
 
-    <!-- Dual Language Switcher & Responsive Menu Logic Scripts -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
@@ -254,13 +260,9 @@
                 element.innerText = element.getAttribute(`data-${currentLang}`);
             });
         }
-
-        // Mobile responsive side-drawer slide system activation
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('click', () => { 
-            navMenu.classList.toggle('active'); 
-        });
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     </script>
 </body>
 </html>

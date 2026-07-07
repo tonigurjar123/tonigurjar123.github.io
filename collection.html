@@ -122,7 +122,47 @@
             <h2 class="section-title">Inspirational Spatial Designs</h2>
 
             <div class="grid-3" id="catalog-grid">
+                
+                <div class="gallery-item kitchen">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Marble Kitchen Island">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Italian Marble</span><h3>Calacatta Kitchen Counter</h3><p>Seamless marble flow across contemporary premium counters.</p></div></div>
                 </div>
+                <div class="gallery-item kitchen">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Granite Kitchen Counter">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Luxury Granite</span><h3>Monolithic Culinary Desk</h3><p>Polished premium granite with elite heat and scratch resilience.</p></div></div>
+                </div>
+                <div class="gallery-item kitchen">
+                    <img src="https://images.unsplash.com/photo-1600489000064-f1ba15e3df2f?auto=format&fit=crop&w=800&q=80" alt="White Marble Kitchen">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Pristine White</span><h3>Statuario Backsplash Suite</h3><p>Elegant continuous grey veins layered matching on premium walls.</p></div></div>
+                </div>
+
+                <div class="gallery-item living">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Marble Flooring Living Hall">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Bookmatch Layout</span><h3>Reflective Lounge Floor</h3><p>High-gloss flawless bookmatched marble mirroring premium chandeliers.</p></div></div>
+                </div>
+                <div class="gallery-item living">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Marble Accent Wall">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Exotic Feature</span><h3>Quartzite Architectural Wall</h3><p>Translucent quartzite serving as an elite premium accent installation.</p></div></div>
+                </div>
+                <div class="gallery-item living">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Luxury Living Room Flooring">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Premium Polishing</span><h3>Imperial Marble Foyer</h3><p>Elegant high-end structural setup for royal home entrances.</p></div></div>
+                </div>
+
+                <div class="gallery-item bathroom">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Marble Bathroom Cladding">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Continuous Cladding</span><h3>Monolithic Spa Suite</h3><p>Continuous flowing marble veins encasing bathtubs and wellness sections.</p></div></div>
+                </div>
+                <div class="gallery-item bathroom">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Dark Textured Marble Bathroom">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Nero Marquina Style</span><h3>Velvet Obsidian Bathroom</h3><p>Striking deep dark marble contrasted cleanly with white borders.</p></div></div>
+                </div>
+                <div class="gallery-item bathroom">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Luxury Bathroom Marble vanity">
+                    <div class="gallery-overlay"><div class="gallery-details"><span class="stone-origin">Pristine Polish</span><h3>Carrara Minimalist Wash-Suite</h3><p>Elite calibrated stone integration configured for custom wash areas.</p></div></div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -154,55 +194,6 @@
     </footer>
 
     <script>
-        const catalogGrid = document.getElementById('catalog-grid');
-        
-        // Custom curated list of premium interior structural image IDs from Picsum
-        // Sourced directly from architecture, room design, and stone texture pools
-        const architectureImageIds = [
-            10, 12, 19, 21, 28, 42, 49, 142, 155, 160, 
-            164, 175, 180, 193, 203, 211, 221, 234, 237, 241, 
-            249, 257, 311, 324, 342, 349, 365, 370, 386, 395, 
-            404, 412, 429, 444, 452, 466, 473, 522, 534, 545, 
-            556, 567, 579, 582, 593, 611, 625, 634, 646, 652
-        ];
-
-        // Generate 50 unique item elements smoothly
-        for (let k = 1; k <= 50; k++) {
-            const card = document.createElement('div');
-            
-            let category = 'living';
-            let categoryTitle = 'Grand Living Design';
-            let categoryDesc = 'Bespoke marble layout configured perfectly for royal residential lounges and floor spaces.';
-            
-            if (k % 3 === 0) {
-                category = 'kitchen';
-                categoryTitle = 'Luxury Kitchen Suite';
-                categoryDesc = 'High-gloss premium granite countertop with seamless bookmatched edge-polishing design.';
-            } else if (k % 3 === 1) {
-                category = 'bathroom';
-                categoryTitle = 'Royal Bathroom Sanctuary';
-                categoryDesc = 'Monolithic pristine marble wall cladding engineered cleanly for premium bathroom suites.';
-            }
-
-            card.className = `gallery-item ${category}`;
-            
-            // Highly robust direct URL path configuration (AdBlock / Shield immune)
-            const imgUrl = `https://picsum.photos/id/${architectureImageIds[k-1]}/800/1000`;
-
-            card.innerHTML = `
-                <img src="${imgUrl}" alt="Jay Mata International Curated Space Application">
-                <div class="gallery-overlay">
-                    <div class="gallery-details">
-                        <span class="stone-origin">Premium Work</span>
-                        <h3>${categoryTitle} ${k}</h3>
-                        <p>${categoryDesc}</p>
-                    </div>
-                </div>
-            `;
-            catalogGrid.appendChild(card);
-        }
-
-        // Filtering configuration engine
         function filterCatalog(categoryName) {
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
